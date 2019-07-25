@@ -19,6 +19,8 @@ music_list = ["白狐"
 music_name = random.choice(music_list)
 
 print("正在播放 %s" % music_name)
-ctypes.windll.winmm.mciSendStringW(r"play C:\Users\dengjun\Music\Music\%s.mp3" % music_name, None, 0, None)
+
+ctypes.windll.winmm.mciSendStringW(r"open C:\Users\dengjun\Music\Music\%s.mp3 alias s" % music_name, None, 0, None)
+ctypes.windll.winmm.mciSendStringW(r"play s repeat", None, 0, None)
 
 input("\n按回车键退出......")
