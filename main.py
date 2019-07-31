@@ -12,9 +12,7 @@ except:
     pass
 
 music_list = os.listdir(music_path)
-print(music_list)
 music_list = list(filter(lambda x: x[-4:].lower() in (".mp3", ), music_list))
-print(music_list)
 
 if len(music_list) == 0:
     print("音乐列表为空，请将音乐文件放在music文件夹中！")
